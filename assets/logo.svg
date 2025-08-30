@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Watchdog eye (monitoring) -->
+  <ellipse cx="100" cy="85" rx="35" ry="22" fill="#10b981" opacity="0.9"/>
+  <circle cx="100" cy="85" r="12" fill="#022c22"/>
+  <circle cx="103" cy="82" r="4" fill="#86efac"/>
+  
+  <!-- Pulse line (uptime monitoring) -->
+  <path d="M 40 130 L 60 130 L 70 110 L 80 150 L 90 120 L 100 140 L 110 120 L 120 150 L 130 110 L 140 130 L 160 130" 
+        stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Small status dots -->
+  <circle cx="50" cy="160" r="4" fill="#10b981"/>
+  <circle cx="100" cy="160" r="4" fill="#10b981"/>
+  <circle cx="150" cy="160" r="4" fill="#fbbf24"/>
+  
+  <!-- Text label -->
+  <text x="100" y="185" font-family="system-ui, sans-serif" font-size="12" font-weight="600" 
+        fill="#94a3b8" text-anchor="middle">WATCHDOG</text>
+</svg>

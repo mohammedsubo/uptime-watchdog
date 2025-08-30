@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  watchdog:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - CHECK_INTERVAL=60
+      - HTTP_TIMEOUT=10
+      - WATCHDOG_DB=/app/data/watchdog.db
+    restart: unless-stopped

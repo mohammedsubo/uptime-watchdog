@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: uptime-watchdog
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: CHECK_INTERVAL
+        value: 60
+      - key: HTTP_TIMEOUT
+        value: 10
+      - key: WATCHDOG_DB
+        value: /app/data/watchdog.db
+    disk:
+      name: watchdog-data
+      mountPath: /app/data
+      sizeGB: 1
+    healthCheckPath: /api/health
+    plan: free
